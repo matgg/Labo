@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cod:</b>
+  <%= @instrumento.cod %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @instrumento.nombre %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @instrumento.marca %>
+</p>
+
+<p>
+  <b>Nro serie:</b>
+  <%= @instrumento.nro_serie %>
+</p>
+
+<p>
+  <b>Observaciones:</b>
+  <%= @instrumento.observaciones %>
+</p>
+
+<p>
+  <b>Detalles:</b>
+  <%= @instrumento.detalles %>
+</p>
+
+<p>
+  <b>Relacionados:</b>
+  <%= @instrumento.relacionados %>
+</p>
+
+
+<%= link_to 'Editar', edit_instrumento_path(@instrumento) %> |
+<%= link_to 'Atrás', instrumentos_path %>

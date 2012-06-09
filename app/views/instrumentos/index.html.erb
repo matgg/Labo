@@ -1,0 +1,35 @@
+<h1>Listing instrumentos</h1>
+
+<table>
+  <tr>
+    <th>Cod</th>
+    <th>Nombre</th>
+    <th>Marca</th>
+    <th>Nro serie</th>
+    <th>Observaciones</th>
+    <th>Detalles</th>
+    <th>Relacionados</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instrumentos.each do |instrumento| %>
+  <tr>
+    <td><%= instrumento.cod %></td>
+    <td><%= instrumento.nombre %></td>
+    <td><%= instrumento.marca %></td>
+    <td><%= instrumento.nro_serie %></td>
+    <td><%= truncate instrumento.observaciones, length:20 %></td>
+    <td><%= truncate instrumento.detalles, length:20 %></td>
+    <td><%= truncate instrumento.relacionados, length:20 %></td>
+    <td><%= link_to 'Ver', instrumento %></td>
+    <td><%= link_to 'Editar', edit_instrumento_path(instrumento) %></td>
+    <td><%= link_to 'Eliminar', instrumento, confirm: '¿Está seguro que desea eliminar?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo', new_instrumento_path %>

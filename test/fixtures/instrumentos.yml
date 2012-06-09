@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cod: 9.99
+  nombre: MyString
+  marca: MyString
+  nro_serie: MyString
+  observaciones: MyText
+  detalles: MyText
+  relacionados: MyText
+
+two:
+  cod: 9.99
+  nombre: MyString
+  marca: MyString
+  nro_serie: MyString
+  observaciones: MyText
+  detalles: MyText
+  relacionados: MyText
