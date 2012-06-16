@@ -2,7 +2,7 @@ class InstrumentosController < ApplicationController
   # GET /instrumentos
   # GET /instrumentos.json
   def index
-    @instrumentos = Instrumento.order('cod').all
+    @instrumentos = Instrumento.order('instrumento_id').all
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,5 +1,9 @@
 Labo::Application.routes.draw do
-  resources :usuarios
+  resources :prestamo_libros
+
+  resources :prestamo_instrumentos
+
+  resources :personas
 
   resources :libros
 

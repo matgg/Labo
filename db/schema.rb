@@ -11,22 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120608023746) do
+ActiveRecord::Schema.define(:version => 20120616032603) do
 
   create_table "instrumentos", :force => true do |t|
-    t.integer  "cod"
+    t.integer  "instrumento_id"
     t.string   "nombre"
     t.string   "marca"
     t.string   "nro_serie"
     t.text     "observaciones"
     t.text     "detalles"
     t.text     "relacionados"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "libros", :force => true do |t|
-    t.integer  "cod"
+    t.integer  "libro_id"
     t.string   "nombre"
     t.string   "autor"
     t.string   "editorial"
@@ -34,6 +34,38 @@ ActiveRecord::Schema.define(:version => 20120608023746) do
     t.text     "observaciones"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "personas", :force => true do |t|
+    t.integer  "persona_id"
+    t.string   "apellido"
+    t.string   "nombre"
+    t.string   "dni"
+    t.integer  "legajo"
+    t.date     "nacimiento"
+    t.string   "email"
+    t.string   "direccion"
+    t.integer  "telefono"
+    t.integer  "celular"
+    t.text     "observacion"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "prestamo_instrumentos", :force => true do |t|
+    t.integer  "persona_id"
+    t.integer  "instrumento_id"
+    t.integer  "responsable_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "prestamo_libros", :force => true do |t|
+    t.integer  "persona_id"
+    t.integer  "instrumento_id"
+    t.integer  "responsable_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "usuarios", :force => true do |t|
