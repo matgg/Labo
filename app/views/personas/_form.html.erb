@@ -1,0 +1,21 @@
+<%= simple_form_for(@persona) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :persona_id %>
+    <%= f.input :apellido %>
+    <%= f.input :nombre %>
+    <%= f.input :dni %>
+    <%= f.input :legajo %>
+    <%= f.input :nacimiento %>
+    <%= f.input :email %>
+    <%= f.input :direccion %>
+    <%= f.input :telefono %>
+    <%= f.input :celular %>
+    <%= f.input :observacion %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

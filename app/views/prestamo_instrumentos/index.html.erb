@@ -1,0 +1,28 @@
+<h1>Listing prestamo_instrumentos</h1>
+
+<table>
+  <tr>
+    <th>Persona codigo</th>
+    <th>Instrumento codigo</th>
+    <th>Responsable codigo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prestamo_instrumentos.each do |prestamo_instrumento| %>
+  <tr>
+    <td><%= prestamo_instrumento.persona_id %></td>
+    <td><%= prestamo_instrumento.instrumento_id %></td>
+    <td><%= prestamo_instrumento.responsable_id %></td>
+    <td><%= link_to 'Show', prestamo_instrumento %></td>
+    <td><%= link_to 'Edit', edit_prestamo_instrumento_path(prestamo_instrumento) %></td>
+    <td><%= link_to 'Destroy', prestamo_instrumento, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New Prestamo instrumento', new_prestamo_instrumento_path %>

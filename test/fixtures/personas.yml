@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo: 1
+  apellido: MyString
+  nombre: MyString
+  dni: MyString
+  legajo: 1
+  nacimiento: 2012-06-15
+  email: MyString
+  direccion: MyString
+  telefono: 1
+  celular: 1
+  observacion: MyText
+
+two:
+  codigo: 1
+  apellido: MyString
+  nombre: MyString
+  dni: MyString
+  legajo: 1
+  nacimiento: 2012-06-15
+  email: MyString
+  direccion: MyString
+  telefono: 1
+  celular: 1
+  observacion: MyText

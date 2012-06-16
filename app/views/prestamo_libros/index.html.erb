@@ -1,0 +1,27 @@
+<h1>Listing prestamo_libros</h1>
+
+<table>
+  <tr>
+    <th>Persona codigo</th>
+    <th>Libro codigo</th>
+    <th>Responsable codigo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prestamo_libros.each do |prestamo_libro| %>
+  <tr>
+    <td><%= prestamo_libro.persona_id %></td>
+    <td><%= prestamo_libro.libro_id %></td>
+    <td><%= prestamo_libro.responsable_id %></td>
+    <td><%= link_to 'Show', prestamo_libro %></td>
+    <td><%= link_to 'Edit', edit_prestamo_libro_path(prestamo_libro) %></td>
+    <td><%= link_to 'Destroy', prestamo_libro, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prestamo libro', new_prestamo_libro_path %>

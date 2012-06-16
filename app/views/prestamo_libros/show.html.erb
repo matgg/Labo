@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Persona codigo:</b>
+  <%= @prestamo_libro.persona_id %>
+</p>
+
+<p>
+  <b>Libro codigo:</b>
+  <%= @prestamo_libro.libro_id %>
+</p>
+
+<p>
+  <b>Responsable codigo:</b>
+  <%= @prestamo_libro.responsable_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_prestamo_libro_path(@prestamo_libro) %> |
+<%= link_to 'Back', prestamo_libros_path %>

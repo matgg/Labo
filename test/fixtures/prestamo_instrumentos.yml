@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  persona_codigo: 1
+  instrumento_codigo: 1
+  responsable_codigo: 1
+
+two:
+  persona_codigo: 1
+  instrumento_codigo: 1
+  responsable_codigo: 1
